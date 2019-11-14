@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Juego de Dominó</title> <center>|
+	<link rel="stylesheet" href="bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		function pegarImagen(num) {
+			var cont4=0;
+			var cont1=0;
+			var cont2=0;
+			var cont3=0;
+              if (num==8||num==14||num==23||num==26||num==28||num==1) {
+               document.getElementById("Fichas").innerHTML+='<img src="Pieza'+num+'.jpg" id="ficha17" class="mula" HSPACE="40">';
+              }else{
+              document.getElementById("Fichas").innerHTML+='<img src="Pieza'+num+'.jpg" id="ficha17" class="juego" HSPACE="40">';
+			}
+			if (num==12 ||num==24 || num==19 || num==22 ||num==20 ||num==27 ||num==17) {
+			document.getElementById("turno").innerHTML="Turno del jugador 1";
+			cont4++;
+		}
+		if (num==6 ||num==8 || num==5 || num==14 ||num==3 ||num==23 ||num==2) {
+			document.getElementById("turno").innerHTML="Turno del jugador 2";
+			cont1++;
+		}
+		if (num==15 ||num==25 || num==26 || num==4 ||num==11 ||num==28 ||num==9) {
+			document.getElementById("turno").innerHTML="Turno del jugador 3";
+			cont2++;
+		}
+		if (num==10 ||num==18 || num==13 || num==21 ||num==7 ||num==16 ||num==1) {
+			document.getElementById("turno").innerHTML="Turno del jugador 4";
+			cont3++;
+		}
+			}
+	    function imagenAbajo(num) {
+	    	var cont4b=0;
+			var cont1b=0;
+			var cont2b=0;
+			var cont3b=0;
+	    	document.getElementById("Fichas").innerHTML+='<img src="Pieza'+num+'.jpg" id="ficha17" class="rotacion" HSPACE="40">';
+	    if (num==12 ||num==24 || num==19 || num==22 ||num==20 ||num==27 ||num==17) {
+	        document.getElementById("turno").innerHTML="Turno del jugador 1";
+	        cont4b++;
+		}
+		if (num==6 ||num==8 || num==5 || num==14 ||num==3 ||num==23 ||num==2) {
+			document.getElementById("turno").innerHTML="Turno del jugador 2";
+			cont1b++;
+		}
+		if (num==15 ||num==25 || num==26 || num==4 ||num==11 ||num==28 ||num==9) {
+			document.getElementById("turno").innerHTML="Turno del jugador 3";
+			cont2b++;
+		}
+		if (num==10 ||num==18 || num==13 || num==21 ||num==7 ||num==16 ||num==1) {
+			document.getElementById("turno").innerHTML="Turno del jugador 4";
+			cont3b++;
+		}
+	    }
+		if (cont1+cont1b==7) {
+			alert("Ha ganado el jugador 1 ");
+		}
+	</script>
+	<style>
+		img{
+			width: 60px;
+		}
+		.juego{
+			width: 80px;
+			-webkit-transform: rotate(-90deg);
+			 -moz-transform: rotate(-90deg);
+			 -ms-transform: rotate(-90deg);
+			 transform: rotate(-90deg);
+			 margin-left: 23px;
+		}
+		.rotacion{
+			width: 80px;
+			 -webkit-transform: rotate(-90deg);
+			 -moz-transform: rotate(-90deg);
+			 -ms-transform: rotate(-90deg);
+			 transform: rotate(-270deg);
+			 margin-left: 23px;
+			}
+			.mula{
+			width: 80px;
+			 -webkit-transform: rotate(-90deg);
+			 -moz-transform: rotate(-90deg);
+			 -ms-transform: rotate(-90deg);
+			 transform: rotate(-180deg);
+			 margin-left: 23px;
+			}
+
+	</style>
+</head>
+<body class="container" background="MaderaFondo.jpg" width= "1000px">
+	<h1> <font size="14" color="White" face="Comic Sans MS">Juego de Dominó</h1> <center>
+	<h3> <font size="10" color="White" face="Comic Sans MS" id="turno"></h3>
+	<hr>
+	<div class="row">
+		<div class="col-md-10">
+			<div id="Fichas"> 
+			  
+			  </div> 
+		</div>
+		
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6" style="margin-top: 10px">
+				<h3>Jugador 1</h3><hr>
+				<table>
+					<td><input type="checkbox" id="6" onclick="pegarImagen(6)"><font size="5" color="White" face="Comic Sans MS">0/5</td>
+					<td><input type="checkbox" id="8" onclick="pegarImagen(8)"><font size="5" color="White" face="Comic Sans MS">1/1</td>
+					<td><input type="checkbox" id="5" onclick="pegarImagen(5)"><font size="5" color="White" face="Comic Sans MS">0/4</td>
+					<td><input type="checkbox" id="14" onclick="pegarImagen(14)"><font size="5" color="White" face="Comic Sans MS">2/2</td>
+					<td><input type="checkbox" id="3" onclick="pegarImagen(3)"><font size="5" color="White" face="Comic Sans MS">0/2</td>
+					<td><input type="checkbox" id="23" onclick="pegarImagen(23)"><font size="5" color="White" face="Comic Sans MS">4/4</td>
+					<td><input type="checkbox" id="2" onclick="pegarImagen(2)"><font size="5" color="White" face="Comic Sans MS">0/1</td>
+					<tr>
+
+						<td><img src="Pieza6.jpg"  id="ficha6" alt=""></td>
+						<td><img src="Pieza8.jpg"  id="ficha8" alt=""></td>
+						<td><img src="Pieza5.jpg"  id="ficha5" alt=""></td>
+						<td><img src="Pieza14.jpg" id="ficha14" alt=""></td>
+						<td><img src="Pieza3.jpg"  id="ficha3" alt=""></td>
+						<td><img src="Pieza23.jpg" id="ficha23" alt=""></td>
+						<td><img src="Pieza2.jpg" id="ficha2" alt=""></td>
+					</tr>
+					<td><input type="checkbox" id="6" onclick="imagenAbajo(6)"><font size="5" color="White" face="Comic Sans MS">5/0</td>
+					<td><input type="checkbox" id="8" onclick="imagenAbajo(8)"><font size="5" color="White" face="Comic Sans MS">1/1</td>
+					<td><input type="checkbox" id="5" onclick="imagenAbajo(5)"><font size="5" color="White" face="Comic Sans MS">4/0</td>
+					<td><input type="checkbox" id="14" onclick="imagenAbajo(14)"><font size="5" color="White" face="Comic Sans MS">2/2</td>
+					<td><input type="checkbox" id="3" onclick="imagenAbajo(3)"><font size="5" color="White" face="Comic Sans MS">2/0</td>
+					<td><input type="checkbox" id="23" onclick="imagenAbajo(23)"><font size="5" color="White" face="Comic Sans MS">4/4</td>
+					<td><input type="checkbox" id="2" onclick="imagenAbajo(2)"><font size="5" color="White" face="Comic Sans MS">1/0</td>
+				</table>
+			</div>
+
+			<div class="col-md-6" style="margin-top: 10px">
+				<h3>Jugador 2</h3><hr>
+				<table>
+					<td><input type="checkbox" id="15" onclick="pegarImagen(15)"><font size="5" color="White" face="Comic Sans MS">2/3</td>
+					<td><input type="checkbox" id="25" onclick="pegarImagen(25)"><font size="5" color="White" face="Comic Sans MS">4/6</td>
+					<td><input type="checkbox" id="26" onclick="pegarImagen(26)"><font size="5" color="White" face="Comic Sans MS">5/5</td>
+					<td><input type="checkbox" id="4"  onclick="pegarImagen(4)"><font size="5" color="White" face="Comic Sans MS">0/3</td>
+					<td><input type="checkbox" id="11" onclick="pegarImagen(11)"><font size="5" color="White" face="Comic Sans MS">1/4</td>
+					<td><input type="checkbox" id="28" onclick="pegarImagen(28)"><font size="5" color="White" face="Comic Sans MS">6/6</td>
+					<td><input type="checkbox" id="9" onclick="pegarImagen(9)"><font size="5" color="White" face="Comic Sans MS">1/2</td>
+					<tr>
+						<td><img src="Pieza15.jpg" id="ficha15" alt=""></td>
+						<td><img src="Pieza25.jpg" id="ficha25" alt=""></td>
+						<td><img src="Pieza26.jpg" id="ficha26" alt=""></td>
+						<td><img src="Pieza4.jpg"  id="ficha4" alt=""></td>
+						<td><img src="Pieza11.jpg" id="ficha11" alt=""></td>
+						<td><img src="Pieza28.jpg" id="ficha28" alt=""></td>
+						<td><img src="Pieza9.jpg" id="ficha9" alt=""></td>
+					</tr>
+					<td><input type="checkbox" id="15" onclick="imagenAbajo(15)"><font size="5" color="White" face="Comic Sans MS">3/2</td>
+					<td><input type="checkbox" id="25" onclick="imagenAbajo(25)"><font size="5" color="White" face="Comic Sans MS">6/4</td>
+					<td><input type="checkbox" id="26" onclick="imagenAbajo(26)"><font size="5" color="White" face="Comic Sans MS">5/5</td>
+					<td><input type="checkbox" id="4"  onclick="imagenAbajo(4)"><font size="5" color="White" face="Comic Sans MS">3/0</td>
+					<td><input type="checkbox" id="11" onclick="imagenAbajo(11)"><font size="5" color="White" face="Comic Sans MS">4/1</td>
+					<td><input type="checkbox" id="28" onclick="imagenAbajo(28)"><font size="5" color="White" face="Comic Sans MS">6/6</td>
+					<td><input type="checkbox" id="9" onclick="imagenAbajo(9)"><font size="5" color="White" face="Comic Sans MS">2/1</td>
+					<tr>
+				</table>
+			</div>
+			
+			<div class="col-md-6" style="margin-top: 10px">
+				<h3>Jugador 3</h3><hr>
+				<table>
+					<td><input type="checkbox" id="10" onclick="pegarImagen(10)" ><font size="5" color="White" face="Comic Sans MS">1/3</td>
+					<td><input type="checkbox" id="18" onclick="pegarImagen(18)"><font size="5" color="White" face="Comic Sans MS">2/6</td>
+					<td><input type="checkbox" id="13" onclick="pegarImagen(13)"><font size="5" color="White" face="Comic Sans MS">1/6</td>
+					<td><input type="checkbox" id="21" onclick="pegarImagen(21)"><font size="5" color="White" face="Comic Sans MS">3/5</td>
+					<td><input type="checkbox" id="7"  onclick="pegarImagen(7)"><font size="5" color="White" face="Comic Sans MS">0/6</td>
+					<td><input type="checkbox" id="16" onclick="pegarImagen(16)"><font size="5" color="White" face="Comic Sans MS">2/4</td>
+				    <td><input type="checkbox" id="1" onclick="pegarImagen(1)"><font size="5" color="White" face="Comic Sans MS">0/0</td>		
+					<tr>
+						<td><img src="Pieza10.jpg" id="ficha10" alt=""></td>
+						<td><img src="Pieza18.jpg" id="ficha18" alt=""></td>
+						<td><img src="Pieza13.jpg" id="ficha13" alt=""></td>
+						<td><img src="Pieza21.jpg" id="ficha21" alt=""></td>
+						<td><img src="Pieza7.jpg"  id="ficha7" alt=""></td>
+						<td><img src="Pieza16.jpg" id="ficha16" alt=""></td>
+						<td><img src="Pieza1.jpg" id="ficha1" alt=""></td>
+					</tr>
+					<td><input type="checkbox" id="10" onclick="imagenAbajo(10)" ><font size="5" color="White" face="Comic Sans MS">3/1</td>
+					<td><input type="checkbox" id="18" onclick="imagenAbajo(18)"><font size="5" color="White" face="Comic Sans MS">6/2</td>
+					<td><input type="checkbox" id="13" onclick="imagenAbajo(13)"><font size="5" color="White" face="Comic Sans MS">6/1</td>
+					<td><input type="checkbox" id="21" onclick="imagenAbajo(21)"><font size="5" color="White" face="Comic Sans MS">5/3</td>
+					<td><input type="checkbox" id="7"  onclick="imagenAbajo(7)"><font size="5" color="White" face="Comic Sans MS">6/0</td>
+					<td><input type="checkbox" id="16" onclick="imagenAbajo(16)"><font size="5" color="White" face="Comic Sans MS">4/2</td>
+				    <td><input type="checkbox" id="1" onclick="imagenAbajo(1)"><font size="5" color="White" face="Comic Sans MS">0/0</td>	
+				</table>
+			</div>
+
+			<div class="col-md-6" style="margin-top: 10px">
+				<h3>Jugador 4</h3><hr>
+				<table>
+					<td><input type="checkbox" id="12" onclick="pegarImagen(12)"><font size="5" color="White" face="Comic Sans MS">1/5</td>
+					<td><input type="checkbox" id="24" onclick="pegarImagen(24)"><font size="5" color="White" face="Comic Sans MS">4/5</td>
+					<td><input type="checkbox" id="19" onclick="pegarImagen(19)"><font size="5" color="White" face="Comic Sans MS">3/3</td>
+					<td><input type="checkbox" id="22" onclick="pegarImagen(22)"><font size="5" color="White" face="Comic Sans MS">3/6</td>
+					<td><input type="checkbox" id="20" onclick="pegarImagen(20)"><font size="5" color="White" face="Comic Sans MS">3/4</td>
+					<td><input type="checkbox" id="27" onclick="pegarImagen(27)"><font size="5" color="White" face="Comic Sans MS">5/6</td>
+					<td><input type="checkbox" id="17" onclick="pegarImagen(17)"><font size="5" color="White" face="Comic Sans MS">2/5</td>	
+					<tr>
+						<td><img src="Pieza12.jpg" id="ficha12" alt=""></td>
+						<td><img src="Pieza24.jpg" id="ficha24" alt=""></td>
+						<td><img src="Pieza19.jpg" id="ficha19" alt=""></td>
+						<td><img src="Pieza22.jpg" id="ficha22" alt=""></td>
+						<td><img src="Pieza20.jpg" id="ficha20" alt=""></td>
+						<td><img src="Pieza27.jpg" id="ficha27" alt=""></td>
+						<td><img src="Pieza17.jpg" id="ficha17" alt=""></td>
+	
+					</tr> 
+					<td><input type="checkbox" id="12" onclick="imagenAbajo(12)"><font size="5" color="White" face="Comic Sans MS">5/1</td>
+					<td><input type="checkbox" id="24" onclick="imagenAbajo(24)"><font size="5" color="White" face="Comic Sans MS">5/4</td>
+					<td><input type="checkbox" id="19" onclick="imagenAbajo(19)"><font size="5" color="White" face="Comic Sans MS">3/3</td>
+					<td><input type="checkbox" id="22" onclick="imagenAbajo(22)"><font size="5" color="White" face="Comic Sans MS">6/3</td>
+					<td><input type="checkbox" id="20" onclick="imagenAbajo(20)"><font size="5" color="White" face="Comic Sans MS">4/3</td>
+					<td><input type="checkbox" id="27" onclick="imagenAbajo(27)"><font size="5" color="White" face="Comic Sans MS">6/5</td>
+					<td><input type="checkbox" id="17" onclick="imagenAbajo(17)"><font size="5" color="White" face="Comic Sans MS">5/2</td>	
+					<tr>
+				</table>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
